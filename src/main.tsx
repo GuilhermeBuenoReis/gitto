@@ -3,6 +3,7 @@ import { StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';
 import { routeTree } from './__generatedRouteTree';
 import './globals.css';
+import { TooltipProvider } from './components/ui/tooltip';
 
 const router = createRouter({ routeTree });
 
@@ -18,7 +19,9 @@ if (rootElement && !rootElement.innerHTML) {
 
 	root.render(
 		<StrictMode>
-			<RouterProvider router={router} />
+			<TooltipProvider>
+				<RouterProvider router={router} />
+			</TooltipProvider>
 		</StrictMode>,
 	);
 }
