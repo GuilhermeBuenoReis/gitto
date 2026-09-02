@@ -40,6 +40,10 @@ function getActiveTab(pathname: string): RepositoryTab {
 		return 'changes';
 	}
 
+	if (pathname.startsWith('/history')) {
+		return 'history';
+	}
+
 	if (pathname.startsWith('/branches')) {
 		return 'branches';
 	}
@@ -52,7 +56,7 @@ function getActiveTab(pathname: string): RepositoryTab {
 		return 'pull-request';
 	}
 
-	return 'changes';
+	return 'history';
 }
 
 export function RepositoryContentHeader({
