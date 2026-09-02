@@ -76,7 +76,7 @@ export function RepositoryContentHeader({
 	}
 
 	return (
-		<div className='grid min-h-24 grid-cols-[260px_minmax(0,1fr)] border-b px-6'>
+		<div className='grid min-h-24 grid-cols-[260px_minmax(0,1fr)] border-b px-6 w-full items-center gap-6 justify-between'>
 			<div className='flex flex-col justify-center gap-2'>
 				<h1 className='text-xl font-medium text-foreground'>{title}</h1>
 
@@ -96,7 +96,7 @@ export function RepositoryContentHeader({
 			>
 				<TabsList
 					variant='line'
-					className='h-full w-full justify-around rounded-none bg-transparent p-0'
+					className='h-full w-1/2 justify-around rounded-none bg-transparent p-0'
 				>
 					{repositoryTabs.map((tab) => (
 						<TabsTrigger
