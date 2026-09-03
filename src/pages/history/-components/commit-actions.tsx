@@ -16,7 +16,8 @@ export function CommitActions({ hash }: CommitActionsProps) {
 			<DropdownMenuTrigger
 				render={
 					<Button
-						className='font-inter font-semibold px-6 py-4 text-xs rounded-md'
+						className='font-inter w-auto
+						font-semibold px-6 py-4 text-xs rounded-md'
 						variant='outline'
 					>
 						Quick Actions
@@ -24,7 +25,7 @@ export function CommitActions({ hash }: CommitActionsProps) {
 				}
 			/>
 
-			<DropdownMenuContent>
+			<DropdownMenuContent className='font-inter font-bold w-auto flex gap-4 flex-col p-2 text-xs'>
 				<DropdownMenuItem>Browse files at this commit</DropdownMenuItem>
 				<DropdownMenuItem>Create branch from {hash}</DropdownMenuItem>
 				<DropdownMenuItem className='text-destructive'>

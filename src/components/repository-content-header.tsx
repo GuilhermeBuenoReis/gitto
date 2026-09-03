@@ -1,4 +1,5 @@
 import { useLocation, useNavigate } from '@tanstack/react-router';
+import { CircleIcon } from 'lucide-react';
 import { Tabs, TabsList, TabsTrigger } from './ui/tabs';
 
 const repositoryTabs = [
@@ -82,13 +83,15 @@ export function RepositoryContentHeader({
 	return (
 		<div className='grid min-h-24 grid-cols-[260px_minmax(0,1fr)] border-b px-6 w-full items-center gap-6 justify-between'>
 			<div className='flex flex-col justify-center gap-2'>
-				<h1 className='text-xl font-medium text-foreground'>{title}</h1>
+				<h1 className='text-2xl font-bold font-inter text-foreground'>
+					{title}
+				</h1>
 
-				<div className='flex items-center gap-3 font-mono text-xs text-muted-foreground'>
+				<div className='flex items-center gap-3 font-inter text-xs text-muted-foreground font-medium'>
 					<span>anvero-api</span>
-					<span>·</span>
+					<CircleIcon size={6} />
 					<span>main</span>
-					<span>·</span>
+					<CircleIcon size={6} />
 					<span>Git 2.47.1</span>
 				</div>
 			</div>
